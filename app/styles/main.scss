@@ -1,0 +1,89 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+body {
+  padding: 0;
+  margin:0;
+  font-family:'Arial';
+}
+
+.margin-top-xl{
+  margin-top: 16px;
+}
+
+.text--right{
+  text-align: right;
+}
+.btn--grp--inline{
+  .btn:first-child{
+    margin-right: 10px;
+  }
+}
+
+h3{
+  color:#3B99FC;
+}
+
+.logo{
+  background: #e4d5d5;
+  padding: 16px;
+  margin: 0;
+}
+.red-border{
+  border-color: #f33;
+  box-shadow: none;
+}
+
+
+form{
+  label{
+    font-weight: 500;
+    margin-bottom: 6px;
+    vertical-align: top;
+    color: #212121;
+  }
+  .form-group{
+    margin-bottom: 10px;
+  }
+  .has-error {
+    .help-block{
+      color: #f33;
+    }
+    .form-control {
+      @extend .red-border;
+      &:focus{
+        @extend .red-border;
+      }
+    }
+  }
+  .form-control{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size: 13px;
+    height: 42px;
+    &:focus{
+      box-shadow: none;
+      border-color: #e0e0e0;
+    }
+  }
+  select.form-control,input.form-control{
+    background: #ececec;
+    border: 1px solid #e0e0e0;
+  }
+}
+
+.modal-header .cancel {
+  opacity: 1;
+  color: #9d9d9d;
+}
