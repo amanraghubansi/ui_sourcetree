@@ -40,7 +40,7 @@ angular.module('slCodeApp')
       };
 
       $scope.submitData=function submitData(){
-        if($scope.employeeList.indexOf('employeeName') === -1){
+        if($scope.employeeList.indexOf($scope.employeeName) === -1){
           $scope.employeeSelectError=true;
         }else{
           $scope.$dismiss();
