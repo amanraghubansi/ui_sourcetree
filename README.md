@@ -20,4 +20,8 @@ Running `grunt test` will run the unit tests with karma.
 6. run bower install command
 7. run grunt serve 
 
+<<<<<<< 23f6d3d0d008f5fb435bb2e780f3f9b5e87813f4
  
+=======
+ 
+>>>>>>> readme file updated
