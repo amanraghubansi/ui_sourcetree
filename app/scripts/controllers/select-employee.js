@@ -8,8 +8,8 @@
  * Controller of the slCodeApp
  */
 angular.module('slCodeApp')
-  .controller('SelectEmployeeCtrl', function ($scope,$filter,$window) {
-      var empArr={},userResp;
+  .controller('SelectEmployeeCtrl', function ($scope,$filter,$window,$uibModal) {
+      var empArr={},userResp,thanksModalInstance;
       $scope.welcomeMailFlag=true;
       $scope.teamList=['Engineering','Executive','Finance','Sales'];
       $scope.data = [
@@ -26,6 +26,8 @@ angular.module('slCodeApp')
             empArr=$filter('filter')($scope.data,{team:$scope.selectedTeam});
             $scope.employeeList=(empArr.length && empArr[0].employees) || [];
           }
+          $scope.employeeName='';
+          $scope.employeeSelectError=false;
       };
 
       $scope.closeModal= function closeModal(){
@@ -44,6 +46,15 @@ angular.module('slCodeApp')
           $scope.employeeSelectError=true;
         }else{
           $scope.$dismiss();
+          thanksModalInstance=$uibModal.open({
+            animation: true,
+            backdrop  : 'static',
+            keyboard  : false,
+            templateUrl: 'views/thanks.html'
+          });
+          setTimeout(function(){
+            thanksModalInstance.dismiss();
+          },1300);
         }
       }
 

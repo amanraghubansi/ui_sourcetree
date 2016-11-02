@@ -43,8 +43,8 @@
       </div>
 
       <div class="margin-top-xl btn--grp--inline text--right">
-        <button class="btn btn-default " ng-click="closeModal()">Cancel</button>
-        <button class="btn btn-primary " ng-click="submitData()">Ok</button>
+        <button class="btn  btn-default custom-btn cancel-btn" ng-click="closeModal()">Cancel</button>
+        <button class="btn  btn-primary custom-btn ok-btn" ng-click="submitData()" ng-disabled="employeeSelect.selectTeam.$error.required">Ok</button>
       </div>
 
 
